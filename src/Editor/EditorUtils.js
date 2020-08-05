@@ -159,7 +159,11 @@ export const EU = {
     const map = new Map()
     let newValue = ''
 
-    if (inputText === '') return null
+    if (!inputText)
+    return {
+      map,
+      newValue,
+    }
     const retLines = inputText.split('\n')
 
     retLines.forEach((retLine, rowIndex) => {
